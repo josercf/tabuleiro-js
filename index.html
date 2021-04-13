@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        .casa {
+            width: 64px;
+            height: 64px;
+        }
+
+        .preta {
+            background-color: #000;
+        }
+
+        .branca {
+            background-color: #fff;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        #tabuleiro {
+            max-width: 522px;
+            max-height: 512px;
+            border: #000 solid 1px;
+        }
+
+        .linha {
+            max-width: 520px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Praticando Lógica com Tabuleiro</p>
+
+    <button id="criar-casa-preta">Criar casa preta</button>
+    <button id="criar-casa-branca">Criar casa branca</button>
+
+    <button id="criar-linha">Criar linha</button>
+
+    <br />
+    <br />
+    <br />
+
+    <div id="tabuleiro"></div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="logica.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#criar-casa-preta").click(function () {
+                var div = criarCasaPreta();
+                $("#tabuleiro").append(div);
+            });
+
+            $("#criar-casa-branca").click(function () {
+                var div = criarCasaBranca();
+                $("#tabuleiro").append(div);
+            });
+
+            $("#criar-linha").click(function () {
+                criarTabuleiro()
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
