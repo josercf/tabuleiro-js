@@ -30,6 +30,19 @@
         .linha {
             max-width: 520px;
         }
+
+        .container-cabecalho {
+            max-width: 64px;
+            height: 64px;
+        }
+
+        .vertical-center {
+            margin-top: 50%;
+        }
+
+        .casa >p{
+            text-align: center;
+        }
     </style>
 
 </head>
@@ -40,7 +53,7 @@
     <button id="criar-casa-preta">Criar casa preta</button>
     <button id="criar-casa-branca">Criar casa branca</button>
 
-    <button id="criar-linha">Criar linha</button>
+    <button id="criar-linha">Criar Tabuleiro</button>
 
     <br />
     <br />
@@ -57,12 +70,12 @@
         $(document).ready(function () {
 
             $("#criar-casa-preta").click(function () {
-                var div = criarCasaPreta();
+                var div = criarCasa("preta");
                 $("#tabuleiro").append(div);
             });
 
             $("#criar-casa-branca").click(function () {
-                var div = criarCasaBranca();
+                var div = criarCasa("branca");
                 $("#tabuleiro").append(div);
             });
 
